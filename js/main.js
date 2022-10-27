@@ -1,7 +1,12 @@
 "use strict"
 // creo la lista della spesa
-const list=["pane","pomodori","tonno","uova", "latte"]
+const shoppingList=["pane","pomodori","tonno","uova", "latte"]
 // per ogni elemento della lista creo un elemento <li>
-for(let i=0; i< list.length; i++){
-    console.log(list[i]);
+let i=0
+const listContainer= document.getElementById("list")
+while(i<shoppingList.length){
+    const listItem= document.createElement("li");
+    listItem.innerHTML=shoppingList[i]
+    listContainer.append(listItem)
+
 }
